@@ -45,3 +45,18 @@ const calculateBonus = (salary, performanceRating) => {
 //logged what thier bonus is 
 
 
+
+
+//Task 5
+
+function convertCurrency(amount, exchangeRate) {
+    return `Converted Currency: $${(amount * exchangeRate).toFixed(2)}`;
+}
+// made a function to convert currency
+//used .toFix to round to 2 decimal places
+
+console.log("Task 5 Conversion 1:", convertCurrency(100, 1.1));
+console.log("Task 5 Conversion 2:", convertCurrency(250, 0.85));
+//logged my conversions 
+
+
