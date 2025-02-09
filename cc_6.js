@@ -60,3 +60,22 @@ console.log("Task 5 Conversion 2:", convertCurrency(250, 0.85));
 //logged my conversions 
 
 
+//Task 6 - Higher-Order Function for Bulk Order
+
+function applyBulkDiscount(orders, discountFunction) {
+    return orders.map(discountFunction);
+}
+//made a function for a bulk discount
+
+let orders = [200, 600, 1200, 450, 800];
+//orginal order numbers
+
+let discountedOrders = applyBulkDiscount
+(orders, amount => amount > 500 ? amount * 0.9 : amount);
+// Declared a 10% discount on orders more than 500
+
+console.log("Task 6 Original orders:", orders); 
+console.log("Task 6 Discount orders:", discountedOrders); 
+//logged both original and discounted orders
+
+
