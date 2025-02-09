@@ -20,3 +20,28 @@ function calculateSalesTax(amount, taxRate) {
 console.log(`Task 2 Sales tax 1: $${Math.floor(calculateSalesTax(100, 0.07))}`); 
 console.log(`Task 2 Sales tax 1: $${Math.floor(calculateSalesTax(500, 0.1))}`);
 //logged both sale tax (used math floor to make it whole numbers)
+
+
+
+//Task 3 - Employee Bonus Calculation.
+
+const calculateBonus = (salary, performanceRating) => {
+    let bonus = 0;
+//created arror function calculate bonus
+    
+    if (performanceRating === "Excellent") {
+      bonus = salary * 0.20;
+    } else if (performanceRating === "Good") {
+      bonus = salary * 0.10;
+    } else if (performanceRating === "Average") {
+      bonus = salary * 0.05;
+    }else return "No Bonus"
+    return `Bonus: $${bonus}`; };
+  //used if else statements to help calculate the bonus 
+  //if there is no preformance rating it will state no bonus
+  
+  console.log("Task 3 bonus 1:", calculateBonus(5000, "Excellent")); 
+  console.log("Task 3 Bonus 2:", calculateBonus(7000, "Good"));    
+//logged what thier bonus is 
+
+
