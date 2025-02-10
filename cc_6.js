@@ -123,13 +123,17 @@ function createExpenseTracker() {
   console.log("Task 7 Total 2:", tracker(150)); 
   // Logged both totals for the tracker
   
-//Task 8
+//Task 8 - Employee Promotion Evaluation."
 function calculateYearsToPromotion(employeeLevel) {
     if (employeeLevel >= 10) {
       return 0;
     }
-    return calculateYearsToPromotion(employeeLevel + 1)+2;
+    let remainingLevels = 10 - employeeLevel;
+    return remainingLevels * 2;
   }
+  //I created a functions calculates how many years an eployyee has to reach level 10
+  //then I made a calculation to figure out how many years left they have
   
-  console.log("Task 8 part 1: years to Level 10:", calculateYearsToPromotion(7)); 
-  console.log("Task 8 part 2: years to Level 10:", calculateYearsToPromotion(5));
+  console.log("Task 8 part 1: years to Level 10:", + calculateYearsToPromotion(7)); 
+  console.log("Task 8 part 2: years to Level 10:", + calculateYearsToPromotion(5));
+  //I logged both parts of task 8
