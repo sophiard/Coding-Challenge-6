@@ -45,6 +45,35 @@ const calculateBonus = (salary, performanceRating) => {
 //logged what thier bonus is 
 
 
+//Task 4 - Subscription Pricing Model
+const calculateSubscriptionCost = (plan, months, discount = 0) => {
+    let monthCost;
+// created a const for subscription costs with variables plans months and disocunts
+
+    if (plan === "Basic") {
+        monthCost = 10;
+    } else if (plan === "Premium") {
+        monthCost = 20;
+    } else if (plan === "Enterprise") {
+        monthCost = 50;
+    } else {
+        return "No plan";
+    }
+// stated what plan a person had and how much it costs a month
+
+let discountedCost = (monthCost * months) - discount;
+// created a function to add discount into plan of subscription 
+
+    return `Total Cost: $${discountedCost}`;
+};
+
+
+console.log("Task 4 Subscription 1:", calculateSubscriptionCost("Basic", 6, 10));
+console.log("Task 4 Subscription 2:", calculateSubscriptionCost("Premium", 12, 0));
+//logged the 2 different subsriptions with the disocunted price 
+
+
+
 
 
 //Task 5
@@ -79,3 +108,28 @@ console.log("Task 6 Discount orders:", discountedOrders);
 //logged both original and discounted orders
 
 
+//task 7
+function createExpenseTracker() {
+    let total = 0;
+  
+    return function(expense) {
+      total += expense;
+      return `Total Expenses: $${total}`;
+    };
+  }
+  
+  let tracker = createExpenseTracker();
+  console.log("Task 7 total 1:", tracker(200)); 
+  console.log("Task 7 Total 2:", tracker(150)); 
+  
+  
+//Task 8
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+      return 0;
+    }
+    return calculateYearsToPromotion(employeeLevel + 1)+2;
+  }
+  
+  console.log("Task 8 part 1: years to Level 10:", calculateYearsToPromotion(7)); 
+  console.log("Task 2 part 2: years to Level 10:", calculateYearsToPromotion(5));
