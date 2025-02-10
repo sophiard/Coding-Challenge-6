@@ -108,20 +108,20 @@ console.log("Task 6 Discount orders:", discountedOrders);
 //logged both original and discounted orders
 
 
-//task 7
+//Task 7 - Business Expense Tracker
 function createExpenseTracker() {
-    let total = 0;
-  
+    let totalexpense = 0;
     return function(expense) {
-      total += expense;
-      return `Total Expenses: $${total}`;
+      totalexpense = totalexpense + expense;
+      return `Total Expenses: $${totalexpense}`;
     };
   }
-  
-  let tracker = createExpenseTracker();
+  // I created a function to find the total expenses 
+
+  const tracker = createExpenseTracker()
   console.log("Task 7 total 1:", tracker(200)); 
   console.log("Task 7 Total 2:", tracker(150)); 
-  
+  // Logged both totals for the tracker
   
 //Task 8
 function calculateYearsToPromotion(employeeLevel) {
@@ -132,4 +132,4 @@ function calculateYearsToPromotion(employeeLevel) {
   }
   
   console.log("Task 8 part 1: years to Level 10:", calculateYearsToPromotion(7)); 
-  console.log("Task 2 part 2: years to Level 10:", calculateYearsToPromotion(5));
+  console.log("Task 8 part 2: years to Level 10:", calculateYearsToPromotion(5));
